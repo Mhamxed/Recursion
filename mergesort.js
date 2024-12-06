@@ -23,14 +23,5 @@ function merge(left, right) {
             r++
         }
     }
-    if (l < left.length) {
-        merged.push(left[l])
-    } else if (r < right.length) {
-        merged.push(right[r])
-    }
-    return merged
+    return [...merged, ...left.slice(l), ...right.slice(r)]
 }
-
-const l = [3, 2, 1, 13, 8, 5, 0, 1]
-
-console.log(mergeSort(l))
